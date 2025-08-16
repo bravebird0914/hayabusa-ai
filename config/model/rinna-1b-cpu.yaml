@@ -1,0 +1,14 @@
+name: rinna-1b-cpu
+seed: 42
+huggingface_path: rinna/japanese-gpt-1b
+confidence_threshold: 0.865
+batch_size: 1  # CPUではバッチサイズを小さく
+evaluation_params:
+  output_scores: true
+  return_dict_in_generate: true
+  do_sample: false
+  max_new_tokens: 50
+  num_beams: 5
+  num_return_sequences: 1
+device_map: cpu  # CPU実行用
+
